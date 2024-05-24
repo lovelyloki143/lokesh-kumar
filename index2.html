@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Virtual Real Estate Investment Advisor</title>
+<style>
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.main{
+    width: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%), url(1.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+
+.navbar{
+    width: 1200px;
+    height: 75px;
+    margin: auto;
+}
+
+.icon{
+    width: 200px;
+    float: left;
+    height: 70px;
+}
+
+.logo{
+    color: #ff7200;
+    font-size: 35px;
+    font-family: Arial;
+    padding-left: 20px;
+    float: left;
+    padding-top: 10px;
+    margin-top: 5px
+}
+
+.menu{
+    width: 400px;
+    float: left;
+    height: 70px;
+}
+
+ul{
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul li{
+    list-style: none;
+    margin-left: 62px;
+    margin-top: 27px;
+    font-size: 14px;
+}
+
+ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-family: Arial;
+    font-weight: bold;
+    transition: 0.4s ease-in-out;
+}
+
+ul li a:hover{
+    color: #ff7200;
+}
+
+.search{
+    width: 330px;
+    float: left;
+    margin-left: 270px;
+}
+
+.srch{
+    font-family: 'Times New Roman';
+    width: 200px;
+    height: 40px;
+    background: transparent;
+    border: 1px solid #ff7200;
+    margin-top: 13px;
+    color: #fff;
+    border-right: none;
+    font-size: 16px;
+    float: left;
+    padding: 10px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.btn{
+    width: 100px;
+    height: 40px;
+    background: #ff7200;
+    border: 2px solid #ff7200;
+    margin-top: 13px;
+    color: #fff;
+    font-size: 15px;
+    border-bottom-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+.btn:hover{
+    color: #000;
+}
+
+.btn:focus{
+    outline: none;
+}
+
+.srch:focus{
+    outline: none;
+}
+
+.content{
+    width: 1200px;
+    height: auto;
+    margin: auto;
+    color: #fff;
+    position: relative;
+}
+
+.content .par{
+    padding-left: 20px;
+    padding-bottom: 25px;
+    font-family: Arial;
+    letter-spacing: 1.2px;
+    line-height: 30px;
+}
+
+.content h1{
+    font-family: 'Times New Roman';
+    font-size: 50px;
+    padding-left: 20px;
+    margin-top: 9%;
+    letter-spacing: 2px;
+}
+
+.content .cn{
+    width: 160px;
+    height: 40px;
+    background: #ff7200;
+    border: none;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .4s ease;
+    
+}
+
+.content .cn a{
+    text-decoration: none;
+    color: #000;
+    transition: .3s ease;
+}
+
+.cn:hover{
+    background-color: #fff;
+}
+
+.content span{
+    color: #ff7200;
+    font-size: 65px
+}
+
+.form{
+    width: 250px;
+    height: 380px;
+    background: linear-gradient(to top, rgba(0,0,0,0.8)50%,rgba(0,0,0,0.8)50%);
+    position: absolute;
+    top: -20px;
+    left: 870px;
+    transform: translate(0%,-5%);
+    border-radius: 10px;
+    padding: 25px;
+}
+
+.form h2{
+    width: 220px;
+    font-family: sans-serif;
+    text-align: center;
+    color: #ff7200;
+    font-size: 22px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 2px;
+    padding: 8px;
+}
+
+.form input{
+    width: 240px;
+    height: 35px;
+    background: transparent;
+    border-bottom: 1px solid #ff7200;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    color: #fff;
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin-top: 30px;
+    font-family: sans-serif;
+}
+
+.form input:focus{
+    outline: none;
+}
+
+::placeholder{
+    color: #fff;
+    font-family: Arial;
+}
+
+.btnn{
+    width: 240px;
+    height: 40px;
+    background: #ff7200;
+    border: none;
+    margin-top: 30px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #fff;
+    transition: 0.4s ease;
+}
+.btnn:hover{
+    background: #fff;
+    color: #ff7200;
+}
+.btnn a{
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+.form .link{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    padding-top: 20px;
+    text-align: center;
+}
+.form .link a{
+    text-decoration: none;
+    color: #ff7200;
+}
+.liw{
+    padding-top: 15px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+.icons a{
+    text-decoration: none;
+    color: #fff;
+}
+.icons ion-icon{
+    color: #fff;
+    font-size: 30px;
+    padding-left: 14px;
+    padding-top: 5px;
+    transition: 0.3s ease;
+}
+.icons ion-icon:hover{
+    color: #ff7200;
+}
+
+body {
+  background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20230630/pngtree-d-hand-embracing-real-estate-homeownership-investing-mortgages-purchasing-offers-and-image_3691143.jpg');
+  background-repeat: no-repeat;
+  background-size:50%% 50;
+}
+
+.heading{
+text-align:center;
+color:yellow;
+}
+.center{
+display:block;
+margin-left:auto;
+margin-right:auto;
+}
+.par{
+text-align:center;
+color:blue;
+font-family:arial;
+font-size:25px;
+}
+
+
+
+</style>
+</head>
+<body>
+<script>
+  window.watsonAssistantChatOptions = {
+    integrationID: "58001df8-6d1b-438f-9982-fff26128080e", // The ID of this integration.
+    region: "au-syd", // The region your integration is hosted in.
+    serviceInstanceID: "f3fff7ac-7df2-4522-8b88-d7753f65c6ad", // The ID of your service instance.
+    onLoad: async (instance) => { await instance.render(); }
+  };
+  setTimeout(function(){
+    const t=document.createElement('script');
+    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+    document.head.appendChild(t);
+  });
+</script>
+
+    <div class="main">
+        <div class="navbar">
+            <div class="icon">
+                <h2 class="logo">IBM</h2>
+            </div>
+
+            <div class="menu">
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#">SERVICE</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                </ul>
+            </div>
+
+            <div class="search">
+                <input class="srch" type="search" name="" placeholder="Type To text">
+                <a href="#"> <button class="btn">Search</button></a>
+            </div>
+
+        </div> 
+        <div class="content">
+            <h1 style="color:yellow">Virtual Real Estate Investment Advisor</h1></br>
+            <p style="font-family:arial;font-size:25px;"><b>A virtual Real Estate Investment Advisor to provide an objective, informed viewpoint to help a real estate investor achieve the best returns on the assets.</br>
+For example, an advisor may help a client evaluate tenant retention issues with an income-producing property in the client's portfolio</b></br></br>
+<b>The expected outcomes of the project are:</br></br>
+1.Real estate market analysis.</br></br>
+2.Property evaluations and recommendations.</br></br>
+3.Investment advice and financial planning.</br></br>
+</p></br>
+
+                <button class="cn"><a href="#">ENTER IT</a></button>
+
+                <div class="form">
+                    <h2>login detalies</h2>
+                    <input type="email" name="email" placeholder="Enter Email Here">
+                    <input type="password" name="" placeholder="Enter Password Here">
+                    <button class="btnn"><a href="#">Login</a></button>
+
+                    <p class="link">Don't have an account<br>
+                    <a href="#">Sign up </a> here</a></p>
+                    <p class="liw">Log in with</p>
+
+                    <div class="icons">
+                        <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+                        <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+                        <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+                        <a href="#"><ion-icon name="logo-google"></ion-icon></a>
+                        <a href="#"><ion-icon name="logo-skype"></ion-icon></a>
+                    </div>
+
+                </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+
+<div style="background-color:grey;">
+
+
+<h1 class="heading">Virtual  Real Estate Investment Advisor</h1>
+</br>
+</br>
+<img src="https://png.pngtree.com/thumb_back/fh260/background/20230630/pngtree-d-hand-embracing-real-estate-homeownership-investing-mortgages-purchasing-offers-and-image_3691143.jpg"?p=facebook" alt="title" title="virtual Real Estate Investment Advisor " height="50%" width="50%"class="center">
+</br></br>
+<p class="par"><b>virtual Real Estate Investment Advisor to metaverse is booming, and with it comes a new gold rush: virtual real estate. While exciting, this digital landscape can be tricky to navigate</br>
+Here's what it can do:</br>
+that's where I come in – your Virtual Real Estate Investment Advisor.</br>
+
+Think of me as your guide to the virtual frontier. I specialize in unlocking the potential of virtual land and properties within the metaverse.</br>
+and it will find best advisor that use them.</br>
+Guide you through advisor step-by-step: No more high estamations</br>
+pages or squinting at your phone.</br>
+Whether you're a seasoned investor or a curious newcomer, I can help you make informed decisions in this dynamic market</br>
+No problem, your advisor can suggest alternatives.</br>
+From property evaluation and market analysis to crafting a personalized investment strategy, </br>
+I'm here to equip you with the knowledge and tools to navigate the exciting world of virtual real estate ownership.</br>
+your assistant can automatically add changes investment to a best one.</br>
+</p>
+</br></br>
+
+<h1 class="heading">Real estate market analysis</h1></br></br>
+<img src="https://www.questionpro.com/blog/wp-content/uploads/2021/10/real-estate-market-analysis-min.jpg"?s=612x612&w=0&k=20&c=M4osdhl8A_9abAurnXKhGuLCk-pcV4XYGIaQnFbHQw8=" alt="Real estate market analysis" title="Real estate market analysis" height="50%" width="50%"class="center">
+</br></br>
+<p class="par">
+1.Identifying up-and-coming metaverse platforms with high growth potential."</br>
+2. Understanding how virtual economies within these platforms are maturing and impacting property values.</br>
+3.Advising on market fluctuations and potential buying or selling opportunities.</br>
+</p>
+</br></br>
+
+<h1 class="heading">Property evaluations and recommendations</h1></br></br>
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSzmiiSkVlw38ZUakizm6EXBal_sPU1VOZJBJ5sNjyog&s ="alt="Property evaluations and recommendations" title="Property evaluations and recommendations" height="50%" width="50%"class="center">
+</br></br>
+<p class="par">
+1.Unlike physical property, virtual real estate value depends heavily on factors like location within a metaverse platform, potential uses, and the overall popularity of the platform itself. Your advisor will:</br>
+Analyze the location of a virtual property. Is it near popular areas or planned developments?</br>
+2.Assess the potential use cases. Is it zoned for residential, commercial, or gaming experiences?</br>
+3.Research the specific metaverse platform.  Is it a well-established player with a growing user base?</br>
+4.Based on this analysis, your advisor will recommend suitable virtual properties for your investment goals.</br>
+</p>
+</br></br>
+
+<h1 class="heading">Investment advice and financial planning</h1></br></br>
+<img src="https://www.holisticinvestment.in/wp-content/uploads/2019/03/Investment-Advisor-Vs-Financial-Planner.png" alt="Investment advice and financial planning" title="Investment advice and financial planning" height="50%" width="50%"class="center">
+</br></br>
+<p class="par">
+1.Virtual real estate is a new and volatile market. A good advisor will:</br>
+Understand your risk tolerance and investment goals. Are you looking for a quick flip or a long-term hold?</br>
+2.Develop a personalized investment strategy tailored to your needs.</br>
+3.Help you understand the financial considerations of virtual real estate, including transaction fees and potential tax implications.</br>
+</p>
+</br></br>
+
+
+
+</div>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+</body>
+</html>
